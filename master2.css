@@ -1,0 +1,32 @@
+body {
+  background: rgb(20,20,20);
+}
+
+.neve {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  left: -1px;
+  background: white;
+  top: -1px;
+  transition: all 2s;
+  box-shadow: 0px 0px 4px white;
+}
+
+
+.other {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  left: -1px;
+  background: red;
+  top: -1px;
+}
+
+.flock {
+  width: 15px;
+  position: fixed;
+  top: 0px;
+  animation-direction: normal;
+  ani
+}
