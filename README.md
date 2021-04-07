@@ -1,2 +1,2 @@
 # digital-snow
-Usando esquemas de aleatoriedade e  repetição, crio uma "nevasca digital" usando JS.
+Através esquemas de aleatoriedade e  repetição, crio uma "nevasca digital" usando JS.
