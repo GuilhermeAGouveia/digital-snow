@@ -6,7 +6,7 @@ class DigitalSnow {
   }
 
   createListener(eventType, functionEvent) {
-    document.addEventListener(eventType, functionEvent)
+    document.addEventListener(eventType, functionEvent);
   }
 
   setEventListeners() {
@@ -58,13 +58,13 @@ class DigitalSnow {
 
   renderFlock() {
     for (let i = 0; i < 20; i++) {
-      var node = document.createElement("img");
-      node.setAttribute("class", "flock");
-      node.setAttribute("src", "./flock.svg");
-      var x = Math.floor(Math.random() * 2600);
+      var x =  Math.floor(Math.random() * 2600)
+      var node = new FlockElement({
+        xPos: x,
+        yPos: -27
 
-      node.setAttribute("style", "left:" + x + "px; top: -27px;");
-      this.container.appendChild(node);
+      })
+      this.container.appendChild(node.element);
       document
         .getElementsByClassName("flock")
         [i].animate([{ left: x + "px" }, { top: "100%" }], {
@@ -82,6 +82,24 @@ class DigitalSnow {
           easing: "linear",
         });
     }
+  }
+}
+
+
+class FlockElement {
+  constructor({xPos: x, yPos: y}) {
+    this.element = document.createElement("img");
+    this.position = {
+      x, 
+      y
+    }
+    this.defineAttributes();
+  }
+  defineAttributes() {
+    this.element.setAttribute("class", "flock");
+    this.element.setAttribute("src", "./flock.svg");
+
+    this.element.setAttribute("style", `left: ${this.position.x}px; top: ${this.position.y}px;`);
   }
 }
 
